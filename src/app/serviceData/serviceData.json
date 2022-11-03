@@ -1,0 +1,27 @@
+[  
+  {  
+    "id": 1,  
+    "name":"cats_ui",
+    "serviceUrl": "cats_ui"
+  },  
+  {  
+    "id": 2,  
+    "name":"cats_bau",
+    "serviceUrl": "cats_bau"
+  },  
+  {  
+    "id": 3, 
+    "name":"next_gen",
+    "serviceUrl": "next_gen"
+  },  
+  {  
+    "id": 4, 
+    "name":"dragons",
+    "serviceUrl": "dragons"
+  },  
+  {  
+    "id": 5,  
+    "name":"raphs",
+    "serviceUrl": "raphs"
+  }  
+]  

@@ -1,0 +1,32 @@
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    table.center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+<div>
+    <!-- <button>&#9776;</button> -->
+    <br><table class="center" *ngIf="show" style="width:100%;">
+        <tr>
+          <th style="height:50px;" >Application Name</th>
+          <th>Status</th>
+          <th>Action</th>
+          <!-- <th>Delete</th> -->
+        </tr>
+        <tr style="height:50px;" class="center" *ngFor="let post of posts">
+            <td>{{post.serviceUrl}}</td>
+            <td>{{post.status}}</td>
+            <td>
+                <button>refresh</button>  &nbsp;&nbsp;&nbsp;
+                <button>delete</button>
+            </td>
+            
+          </tr>
+    </table>  
+    </div>

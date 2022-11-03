@@ -1,52 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
 
-li {
-  float: left;
-  border-right:1px solid #bbb;
-}
-
-li:last-child {
-  border-right: none;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 96px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #04AA6D;
-}
-</style>
 </head>
 <body>
 
 <ul>
-  <li><a class="active" href="#home">Dev</a></li>
-  <li><a href="#news">Qa</a></li>
-  <li><a href="#contact">Uat</a></li>
-  <li><a href="#contact">Prod</a></li>
-  <li style="float:right"><a href="#about">Register</a></li>
+  <li><a routerLink="dashBoard">Dev</a></li>
+  <li><a routerLink="dummy">Qa</a></li>
+  <li><a routerLink="dummy">Uat</a></li>   
+  <li><a routerLink="dummy">Prod</a></li>
+  <li style="float:right"><a  class="active" href="#about">&#9776;</a></li>
 </ul>
-
+<div class="" >
+  <!-- <button>&#9776;</button> -->
+  <router-outlet></router-outlet>
+  
+</div>
 </body>
+
 </html>
 
 
