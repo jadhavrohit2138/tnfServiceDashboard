@@ -1,6 +1,7 @@
 import { jsDocComment } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import jsonData from '../serviceData/serviceData.json';
+import jsonDatatemp from '/angular_nodejs/storagForServiceDashboard/globalConfig.json';
 
 @Component({
   selector: 'app-dash-board',
@@ -18,11 +19,14 @@ export class DashBoardComponent implements OnInit {
    callTemp(Service:any){
    
     this.temp=`${Service.name} is refreshed`
+    console.log(Service.name)
    }
    
   ngOnInit(): void {
     this.show=true;
     this.Services=jsonData
+    localStorage.setItem('globalConfig',JSON.stringify(jsonDatatemp))
+    console.log(localStorage.getItem('globalConfig'))
   }
 
 }
