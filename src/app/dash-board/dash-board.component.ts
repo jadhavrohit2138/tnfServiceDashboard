@@ -9,14 +9,20 @@ import jsonData from '../serviceData/serviceData.json';
 })
 export class DashBoardComponent implements OnInit {
   show:boolean;
-  posts:any;
+  Services:any;
+  temp:any
   constructor() {
 
+   }
+
+   callTemp(Service:any){
+   
+    this.temp=`${Service.name} is refreshed`
    }
    
   ngOnInit(): void {
     this.show=true;
-    this.posts=jsonData
+    this.Services=jsonData
   }
 
 }

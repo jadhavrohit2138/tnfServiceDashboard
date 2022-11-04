@@ -1,15 +1,4 @@
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    table.center {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    </style>
 <div>
     <!-- <button>&#9776;</button> -->
     <br><table class="center" *ngIf="show" style="width:100%;">
@@ -19,14 +8,15 @@
           <th>Action</th>
           <!-- <th>Delete</th> -->
         </tr>
-        <tr style="height:50px;" class="center" *ngFor="let post of posts">
-            <td>{{post.serviceUrl}}</td>
-            <td>{{post.status}}</td>
+        <tr style="height:50px;" class="center" *ngFor="let Service of Services">
+            <td>{{Service.serviceUrl}}</td>
+            <td>{{Service.status}}</td>
             <td>
-                <button>refresh</button>  &nbsp;&nbsp;&nbsp;
-                <button>delete</button>
+                <button class="" (click)="callTemp(Service)" >&#8635;</button>  &nbsp;&nbsp;&nbsp;
+                <button class="" >&#274C;</button>
             </td>
             
           </tr>
     </table>  
+    <h1>{{temp}}</h1>
     </div>
