@@ -2,26 +2,35 @@
   {  
     "id": 1,  
     "name":"cats_ui",
-    "serviceUrl": "cats_ui"
+    "serviceUrl": "cats_ui",
+    "status":"up"
   },  
   {  
     "id": 2,  
     "name":"cats_bau",
-    "serviceUrl": "cats_bau"
+    "serviceUrl": "cats_bau",
+    "status":"down"
+
   },  
   {  
     "id": 3, 
     "name":"next_gen",
-    "serviceUrl": "next_gen"
+    "serviceUrl": "next_gen",
+    "status":"up"
+
   },  
   {  
     "id": 4, 
     "name":"dragons",
-    "serviceUrl": "dragons"
+    "serviceUrl": "dragons",
+    "status":"down"
+
   },  
   {  
     "id": 5,  
     "name":"raphs",
-    "serviceUrl": "raphs"
+    "serviceUrl": "raphs",
+    "status":"up"
+
   }  
 ]  
