@@ -27,6 +27,8 @@ export class DashBoardComponent implements OnInit {
     this.Services=jsonData
     localStorage.setItem('globalConfig',JSON.stringify(jsonDatatemp))
     console.log(localStorage.getItem('globalConfig'))
+    this.temp= localStorage.getItem('globalConfig')
+    console.log(JSON.parse(this.temp))
   }
 
 }
