@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {HttpServiceService} from './HttpService/http-service.service';
+
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +11,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tnfServiceDashboard';
 
+constructor(private service:HttpServiceService, private httpClient:HttpClient ){}
+  ngOnInit(): void {
+    this.service.storeToLocalStorage();  
+  }
 
 }

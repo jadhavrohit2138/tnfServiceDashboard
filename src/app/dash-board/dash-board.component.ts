@@ -1,7 +1,8 @@
-import { jsDocComment } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
-import jsonData from '../serviceData/serviceData.json';
-import jsonDatatemp from '/angular_nodejs/storagForServiceDashboard/globalConfig.json';
+import { Component, OnInit,Input, importProvidersFrom } from '@angular/core';
+// import jsonData from 'C:\\angular_nodejs\\storagForServiceDashboard\\devService.json';
+// import jsonData from '../serviceData/serviceData.json';
+import globalConfigPath from '/angular_nodejs/storagForServiceDashboard/globalConfig.json';
+import{ HttpServiceService } from "../HttpService/http-service.service"
 
 @Component({
   selector: 'app-dash-board',
@@ -12,23 +13,28 @@ export class DashBoardComponent implements OnInit {
   show:boolean;
   Services:any;
   temp:any
-  constructor() {
+  globalPathString:any
+
+  constructor(private service:HttpServiceService) {
 
    }
 
-   callTemp(Service:any){
-   
+   callRefresh(Service:any){
     this.temp=`${Service.name} is refreshed`
     console.log(Service.name)
+    console.log(Service.url)
+    this.service.hitServiceApi(Service.url).subscribe(data=>
+      {
+        console.log(">>>>>>> "+data)
+    });
    }
-   
+  
   ngOnInit(): void {
-    this.show=true;
-    this.Services=jsonData
-    localStorage.setItem('globalConfig',JSON.stringify(jsonDatatemp))
-    console.log(localStorage.getItem('globalConfig'))
-    this.temp= localStorage.getItem('globalConfig')
-    console.log(JSON.parse(this.temp))
+    // this.show=true;
+    // this.Services = this.service.getDevUrl()
+    // console.log(this.Services)
+        // this.globalPathString= localStorage.getItem('globalConfig')
+        // console.log(JSON.parse(this.globalPathString))
   }
 
 }

@@ -9,10 +9,10 @@
           <!-- <th>Delete</th> -->
         </tr>
         <tr style="height:50px;" class="center" *ngFor="let Service of Services">
-            <td>{{Service.serviceUrl}}</td>
+            <td>{{Service.name}}</td>
             <td [ngStyle]="{'background-color': Service.status === 'up' ? 'green': 'red'}" >{{Service.status}}</td>
             <td>
-                <button class="" (click)="callTemp(Service)" >&#8635;</button>  &nbsp;&nbsp;&nbsp;
+                <button class="" (click)="callRefresh(Service)" >&#8635;</button>  &nbsp;&nbsp;&nbsp;
                 <button class="" >&#10060;</button>
             </td>
             
