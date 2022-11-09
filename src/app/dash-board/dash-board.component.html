@@ -1,22 +1,18 @@
 
 <div>
-    <!-- <button>&#9776;</button> -->
-    <br><table class="center" *ngIf="show" style="width:100%;">
+    <br><table class="center"  style="width:100%;">
         <tr>
           <th style="height:50px;" >Application Name</th>
           <th>Status</th>
           <th>Action</th>
-          <!-- <th>Delete</th> -->
         </tr>
-        <tr style="height:50px;" class="center" *ngFor="let Service of Services">
-            <td>{{Service.name}}</td>
-            <td [ngStyle]="{'background-color':getColor(Service.status)}" >{{Service.status}}</td>
+        <tr style="height:50px;" class="center" *ngFor="let singleService of Services">
+            <td>{{singleService.name}}</td>
+            <td [ngStyle]="{'background-color':getColor(singleService.status)}" >{{singleService.status}}</td>
             <td>
-                <button class="" (click)="callRefresh(Service)" >&#8635;</button>  &nbsp;&nbsp;&nbsp;
-                <button class="" >&#10060;</button>
+                <button  (click)="callRefresh(singleService)" >&#8635;</button>  &nbsp;&nbsp;&nbsp;
+                <button  >&#10060;</button>
             </td>
-            
           </tr>
     </table>  
-    <h1>{{temp}}</h1>
     </div>

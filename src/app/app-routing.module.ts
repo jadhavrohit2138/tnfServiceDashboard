@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashBoardDummyComponent } from './dash-board-dummy/dash-board-dummy.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 
 const routes: Routes = [
@@ -15,9 +14,6 @@ const routes: Routes = [
 },
 {
   path:'prodDashBoard',component:DashBoardComponent, 
-},
-{
-  path:'dummy',component:DashBoardDummyComponent
 }
 ];
 

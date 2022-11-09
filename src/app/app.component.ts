@@ -13,7 +13,7 @@ export class AppComponent {
 
 constructor(private service:HttpServiceService, private httpClient:HttpClient ){}
   ngOnInit(): void {
-    this.service.storeToLocalStorage();  
+    this.service.pathStoreToSessionStorage();  
   }
   
   devTabCall(){

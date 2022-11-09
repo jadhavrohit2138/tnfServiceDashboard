@@ -4,13 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
-import { DashBoardDummyComponent } from './dash-board-dummy/dash-board-dummy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashBoardComponent,
-    DashBoardDummyComponent
   ],
   imports: [
     BrowserModule,
