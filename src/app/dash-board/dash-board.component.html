@@ -10,7 +10,7 @@
         </tr>
         <tr style="height:50px;" class="center" *ngFor="let Service of Services">
             <td>{{Service.name}}</td>
-            <td [ngStyle]="{'background-color': Service.status === 'up' ? 'green': 'red'}" >{{Service.status}}</td>
+            <td [ngStyle]="{'background-color':getColor(Service.status)}" >{{Service.status}}</td>
             <td>
                 <button class="" (click)="callRefresh(Service)" >&#8635;</button>  &nbsp;&nbsp;&nbsp;
                 <button class="" >&#10060;</button>

@@ -15,5 +15,19 @@ constructor(private service:HttpServiceService, private httpClient:HttpClient ){
   ngOnInit(): void {
     this.service.storeToLocalStorage();  
   }
+  
+  devTabCall(){
+    sessionStorage.setItem('tabCall',"dev" )
+  }
+  qaTabCall(){
+    sessionStorage.setItem('tabCall',"qa" )  
+  }
 
+  uatTabCall(){
+    sessionStorage.setItem('tabCall',"uat" ) 
+  }
+
+  prodTabCall(){
+    sessionStorage.setItem('tabCall',"prod" ) 
+  }
 }

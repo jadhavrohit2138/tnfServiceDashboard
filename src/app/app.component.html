@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<ul>
-  <li><a routerLink="dashBoard">Dev</a></li>
-  <li><a routerLink="dummy">Qa</a></li>
-  <li><a routerLink="dummy">Uat</a></li>   
-  <li><a routerLink="dummy">Prod</a></li>
-  <li style="float:right"><a  class="active" href="#about">&#9776;</a></li>
-</ul>
-<div class="" >
-  <!-- <button>&#9776;</button> -->
-  <router-outlet ></router-outlet>
-  <!-- <app-dash-board [devPAth]="dev" ></app-dash-board> -->
-  
-</div>
+  <ul>
+    <li><a routerLink="devDashBoard" (click)="devTabCall()">Dev</a></li>
+    <li><a routerLink="qaDashBoard" (click)="qaTabCall()">Qa</a></li>
+    <li><a routerLink="uatDashBoard" (click)="uatTabCall()">Uat</a></li>
+    <li><a routerLink="prodDashBoard" (click)="prodTabCall()">Prod</a></li>
+    <li style="float:right"><a class="active" href="#about">&#9776;</a></li>
+  </ul>
+  <div class="">
+    <router-outlet></router-outlet>
+  </div>
 </body>
 
 </html>
-
-

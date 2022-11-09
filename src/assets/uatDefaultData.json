@@ -1,0 +1,22 @@
+[
+    {
+    "url":"https://636a50c0c07d8f936d99fafa.mockapi.io/Dashboard01",
+    "name":"tme",
+    "status":"loading"
+   },
+    {
+    "url":"https://636a50c0c07d8f936d99fafa.mockapi.io/Dashboard",
+    "name":"cats",
+    "status":"loading"
+   },
+    {
+    "url":"https://636a50c0c07d8f936d99fafa.mockapi.io/Dashboard",
+    "name":"nextgen",
+    "status":"loading"
+   },
+    {
+    "url":"https://636a50c0c07d8f936d99fafa.mockapi.io/Dashboard01",
+    "name":"dragon",
+    "status":"loading"
+   }
+  ]
