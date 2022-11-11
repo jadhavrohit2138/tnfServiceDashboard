@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { ErrorHandlerCompComponent } from './error-handler-comp/error-handler-comp.component';
 
 const routes: Routes = [
 {
@@ -14,6 +15,9 @@ const routes: Routes = [
 },
 {
   path:'prodDashBoard',component:DashBoardComponent, 
+},
+{
+  path:'pageNotFound',component:ErrorHandlerCompComponent
 }
 ];
 

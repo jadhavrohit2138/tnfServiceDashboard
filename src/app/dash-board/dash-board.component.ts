@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, importProvidersFrom } from '@angular/core';
-import { HttpServiceService } from "../HttpService/http-service.service"
+import { HttpServiceService } from "../Service/http-service.service"
+import constantValue from '../constant/constantStrings.json'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash-board',
@@ -12,29 +14,23 @@ export class DashBoardComponent implements OnInit {
   statusResp: any
   assetUrl: string
 
-  constructor(private service: HttpServiceService) { } // Constructor
+  constructor(private service: HttpServiceService,private router:Router) { } // Constructor
 
   callRefresh(singleService: any) {
-    console.log("------------\nRefreshed " + singleService.name + " Service\n"+singleService.url)
+    singleService.status = constantValue.string.loading
+    console.log(`------------\n${constantValue.string.Refreshed} `+singleService.name+ ` ${constantValue.string.Service}\n`+singleService.url)
     this.service.hitServiceApi(singleService.url).subscribe(resp => {
       this.statusResp = resp
       singleService.status = this.statusResp.status
     });
   }
 
-  getColor(Service: string): any {
-    switch (Service) {
-      case 'up':
-        return 'green';
-      case 'down':
-        return 'red';
-      default:
-        return 'gray';
-    }
+  getColor(status: string): any {
+    return this.service.getColorService(status);
   }
 
 
-  ngOnInit(): void {    // Ng On It
+  ngOnInit(): void {    
     this.assetUrl = this.service.getAssetPath();
     this.service.getJSON(this.assetUrl).subscribe((resp) => {
         this.Services = resp
@@ -42,8 +38,12 @@ export class DashBoardComponent implements OnInit {
           this.service.hitServiceApi(element.url).subscribe(data => {
             this.statusResp = data
             element.status = this.statusResp.status
+          },error=>{
+            this.router.navigateByUrl('pageNotFound')
           });
         });
+      },error=>{
+        this.router.navigateByUrl('pageNotFound')
       })
   }
 }

@@ -1,0 +1,30 @@
+{
+    "string":{
+        "globalConfig":"globalConfig",
+        "tabCall":"tabCall",
+        "dev":"dev",
+        "qa":"qa",
+        "uat":"uat",
+        "prod":"prod",
+        "loading":"loading",
+        "Refreshed":"Refreshed",
+        "Service":"Service"
+    },
+    "assetsUrl":{
+        "devUrl":"assets/devDefaultData.json",
+        "qaUrl":"assets/qaDefaultData.json",
+        "uatUrl":"assets/uatDefaultData.json",
+        "prodUrl":"assets/prodDefaultData.json"
+
+    },
+    "statusCondition":{
+        "up":"up",
+        "down":"down"
+    },
+    "statusColor":{
+        "green":"green",
+        "red":"red",
+        "gray":"gray"
+    }
+
+}

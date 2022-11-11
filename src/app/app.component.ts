@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {HttpServiceService} from './HttpService/http-service.service';
-
+import {HttpServiceService} from './Service/http-service.service';
+import constantValue from './constant/constantStrings.json'
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -17,17 +17,18 @@ constructor(private service:HttpServiceService, private httpClient:HttpClient ){
   }
   
   devTabCall(){
-    sessionStorage.setItem('tabCall',"dev" )
+    sessionStorage.setItem(constantValue.string.tabCall,constantValue.string.dev)
   }
+
   qaTabCall(){
-    sessionStorage.setItem('tabCall',"qa" )  
+    sessionStorage.setItem(constantValue.string.tabCall,constantValue.string.qa)  
   }
 
   uatTabCall(){
-    sessionStorage.setItem('tabCall',"uat" ) 
+    sessionStorage.setItem(constantValue.string.tabCall,constantValue.string.uat) 
   }
 
   prodTabCall(){
-    sessionStorage.setItem('tabCall',"prod" ) 
+    sessionStorage.setItem(constantValue.string.tabCall,constantValue.string.prod) 
   }
 }
